@@ -1,5 +1,4 @@
 # STREAM : Spatio-TempoRal Evaluation and Analysis Metric for Video Generative Models
-[STREAM : Spatio-TempoRal Evaluation and Analysis Metric for Video Generative Models] (https://openreview.net/pdf?id=7JfKCZQPxJ)
 
 Authors : Pumjun Kim, SeoJun Kim, [Jaejun Yoo](https://scholar.google.co.kr/citations?hl=en&user=7NBlQw4AAAAJ)
 
