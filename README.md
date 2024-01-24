@@ -13,14 +13,15 @@ Authors : Pumjun Kim, SeoJun Kim, [Jaejun Yoo](https://scholar.google.co.kr/cita
 ## 💡 Overview of STREAM 💡
 
 
-# ↗️ Quick Start ↗️
+# Quick Start
 You can install our method using `pip` command!
 ```
 pip install v-stream
 ```
 
 ## How to use
-In this example, we evaluate generated samples in `./video/fake` within `./video/real`. To follow the example, video data should follow conditions as :
+In this example, we evaluate generated samples in `./video/fake` within `./video/real`.
+To follow this example, video data should follow conditions as :
 ```
 <vid_dir>
 ├── vid_00000.npy
@@ -33,4 +34,8 @@ vid_%05d.npy
 * numpy.ndarray
 * dtype : np.uint8 (0 ~ 255)
 * shape : (f, h, w, c) 
+```
+1. Call packages
+```
+import STREAM from v-stream
 ```
