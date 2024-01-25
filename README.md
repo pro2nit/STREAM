@@ -20,7 +20,7 @@ pip install v-stream
 ```
 
 ## How to use
-In this example, we evaluate generated samples in `./video/fake` within `./video/real`.
+In this example, we evaluate generated samples in `./video/fake` within `./video/real`. (you can change directory)
 To follow this example, video data should follow conditions as :
 ```
 <vid_dir>
@@ -37,5 +37,42 @@ vid_%05d.npy
 ```
 1. Call packages
 ```
-import STREAM from v-stream
+# Call packages
+from stream import STREAM
+
+stream = STREAM(num_frame=16, model='dinov2')
+```
+
+2. Calculate Skewness & Compute Mean signal
+```
+real_dir = './video/real'
+fake_dir = './video/fake/'
+
+real_skewness, real_mean_signal = stream.calculate_skewness(real_dir, 'cuda', batch_size=4)
+fake_skewness, fake_mean_signal = stream.calculate_skewness(fake_dir, 'cuda', batch_size=4)
+```
+
+3. Compute ***STREAM-T*** between real and fake skewness
+```
+# STREAM-Temporal
+stream_T = stream.stream_T(real_skewness, fake_skewness)
+print('STREAM-T :', stream_T)
+> STREAM-T : 0.729215577505656
+```
+
+4. Compute ***STREAM-F*** and ***STREAM-D*** between real and fake mean signals
+```
+# STREAM-Spatio
+stream_S = stream.stream_S(real_mean_signal, fake_mean_signal)
+
+# STREAM-Fidelity
+stream_F = stream_S['stream_F']
+# STREAM-Diversity
+stream_D = stream_S['stream_D']
+
+print('STREAM-F :', stream_F)
+print('STREAM-D :', stream_D)
+> Num real: 100 Num fake: 100
+> STREAM-F : 0.96
+> STREAM-D : 0.87 
 ```
