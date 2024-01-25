@@ -106,9 +106,6 @@ above code will print out as below :
 > STREAM-D : 0.87 
 ```
 
-## Custom Models
-
-
 # Citation
 If you find this repository useful for your research, please cite the following work.
 ```
