@@ -44,7 +44,7 @@ from stream import STREAM
 stream = STREAM(num_frame=16, model='swav')
 ```
 <details> <summary> CUSTOM EMBEDDER </summary>
-  current stream version(0.1.0) supports embedder with 'SwAV' and 'DINOv2'
+  current stream version(0.1.0) supports embedder with `SwAV` and `DINOv2`.
   ```python
   # swav
   embedder = torch.hub.load('facebookresearch/swav:main', 'resnet50')
@@ -52,7 +52,7 @@ stream = STREAM(num_frame=16, model='swav')
   embedder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vits14')
   ```
     
-    If you want custom embedder except 'SwAV' and 'DINOv2', you can try below :
+  If you want custom embedder, you can try below :
   ```python
   NUM_EMBED = "LENGTH OF EMBEDDING VECTOR - int"
   CUSTOM_EMBEDDER = "CUSTOM EMBEDDER - torch.nn.Module"
