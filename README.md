@@ -22,7 +22,7 @@ pip install v-stream
 ## How to use
 In this example, we evaluate generated samples in `./video/fake` within `./video/real`. (you can change directory)
 To follow this example, video data should follow conditions as :
-```
+```bash
 <vid_dir>
 ├── vid_00000.npy
 ├── vid_00001.npy
