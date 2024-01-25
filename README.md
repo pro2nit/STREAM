@@ -57,9 +57,8 @@ fake_skewness, fake_mean_signal = stream.calculate_skewness(fake_dir, 'cuda', ba
 # STREAM-Temporal
 stream_T = stream.stream_T(real_skewness, fake_skewness)
 print('STREAM-T :', stream_T)
-
-> STREAM-T : 0.729215577505656
 ```
+> STREAM-T : 0.729215577505656
 
 4. Compute ***STREAM-F*** and ***STREAM-D*** between real and fake mean signals
 ```python
@@ -73,8 +72,23 @@ stream_D = stream_S['stream_D']
 
 print('STREAM-F :', stream_F)
 print('STREAM-D :', stream_D)
-
+```
 > Num real: 100 Num fake: 100
 > STREAM-F : 0.96
 > STREAM-D : 0.87 
+
+# Citation
+If you find this repository useful for your research, please cite the following work.
 ```
+@article{kim2024stream,
+  title={STREAM : Spatio-TempoRal Evaluation and Analysis Metric for Video Generative Models},
+  author={Kim, Pum Jun and Kim, Seojun and and Yoo, Jaejun},
+  journal={arXiv preprint arXiv:2306.08013},
+  year={2024}
+}
+
+
+
+
+
+
