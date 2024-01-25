@@ -45,6 +45,7 @@ stream = STREAM(num_frame=16, model='swav')
 ```
 
 <details> <summary> CUSTOM EMBEDDER </summary>
+ 
   * current stream version(0.1.0) supports embedder with `SwAV` and `DINOv2`.
   
   ```python
