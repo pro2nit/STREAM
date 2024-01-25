@@ -36,7 +36,7 @@ vid_%05d.npy
 * shape : (f, h, w, c) 
 ```
 1. Call packages
-```
+```python
 # Call packages
 from stream import STREAM
 
@@ -44,7 +44,7 @@ stream = STREAM(num_frame=16, model='dinov2')
 ```
 
 2. Calculate Skewness & Compute Mean signal
-```
+```python
 real_dir = './video/real'
 fake_dir = './video/fake/'
 
@@ -53,15 +53,16 @@ fake_skewness, fake_mean_signal = stream.calculate_skewness(fake_dir, 'cuda', ba
 ```
 
 3. Compute ***STREAM-T*** between real and fake skewness
-```
+```python
 # STREAM-Temporal
 stream_T = stream.stream_T(real_skewness, fake_skewness)
 print('STREAM-T :', stream_T)
+
 > STREAM-T : 0.729215577505656
 ```
 
 4. Compute ***STREAM-F*** and ***STREAM-D*** between real and fake mean signals
-```
+```python
 # STREAM-Spatio
 stream_S = stream.stream_S(real_mean_signal, fake_mean_signal)
 
@@ -72,6 +73,7 @@ stream_D = stream_S['stream_D']
 
 print('STREAM-F :', stream_F)
 print('STREAM-D :', stream_D)
+
 > Num real: 100 Num fake: 100
 > STREAM-F : 0.96
 > STREAM-D : 0.87 
