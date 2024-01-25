@@ -40,8 +40,26 @@ vid_%05d.npy
 # Call packages
 from stream import STREAM
 
-stream = STREAM(num_frame=16, model='dinov2')
+# for DINOv2 : mode = 'dinov2'
+stream = STREAM(num_frame=16, model='swav')
 ```
+<details> <summary> CUSTOM EMBEDDER </summary>
+current stream version(0.1.0) supports embedder with 'SwAV' and 'DINOv2'
+```python
+# swav
+embedder = torch.hub.load('facebookresearch/swav:main', 'resnet50')
+# dinov2
+embedder = torch.hub.load('facebookresearch/dinov2', 'dinov2_vits14')
+```
+  
+  If you want custom embedder except 'SwAV' and 'DINOv2', you can try below :
+```python
+NUM_EMBED = "LENGTH OF EMBEDDING VECTOR - int"
+CUSTOM_EMBEDDER = "CUSTOM EMBEDDER - torch.nn.Module"
+stream = STREAM(num_frame=16, num_embed=NUM_EMBED)
+stream.embedder = CUSTOM_EMBEDDER
+```
+</details>
 
 ### 2. Calculate Skewness & Compute Mean signal
 ```python
@@ -82,6 +100,9 @@ above code will print out as below :
 > STREAM-F : 0.96
 > STREAM-D : 0.87 
 ```
+
+## Custom Models
+
 
 # Citation
 If you find this repository useful for your research, please cite the following work.
