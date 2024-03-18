@@ -2,7 +2,7 @@
 
 Authors : Pumjun Kim, SeoJun Kim, [Jaejun Yoo](https://scholar.google.co.kr/citations?hl=en&user=7NBlQw4AAAAJ)
 
-<a href='https://openreview.net/pdf?id=7JfKCZQPxJ'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://github.com/seo-jun-kim/STREAM'><img src='https://img.shields.io/badge/Code-Github-green'></a> <a href='https://colab.research.google.com/drive/1LriUNB9g8lIrbPCeKDuQbN4I_ALvrg8m?usp=sharing'><img src='https://img.shields.io/badge/Code-Colab-F9AB00'></a>
+<a href='https://arxiv.org/abs/2403.09669'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://github.com/seo-jun-kim/STREAM'><img src='https://img.shields.io/badge/Code-Github-green'></a> <a href='https://colab.research.google.com/drive/1LriUNB9g8lIrbPCeKDuQbN4I_ALvrg8m?usp=sharing'><img src='https://img.shields.io/badge/Code-Colab-F9AB00'></a>
 
 ## 📌 News 📌
 [2024.01.17] - 🎊 **STREAM** has been accepted by ICLR 2024! 🎊
@@ -112,7 +112,7 @@ If you find this repository useful for your research, please cite the following 
 @article{kim2024stream,
   title={STREAM : Spatio-TempoRal Evaluation and Analysis Metric for Video Generative Models},
   author={Kim, Pum Jun and Kim, Seojun and and Yoo, Jaejun},
-  journal={arXiv preprint arXiv:2306.08013},
+  journal={arXiv preprint arXiv:2403.09669},
   year={2024}
 }
 ```
